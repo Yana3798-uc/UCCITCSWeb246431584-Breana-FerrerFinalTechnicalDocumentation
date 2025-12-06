@@ -7,191 +7,165 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #2c3e50;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+    color: #f5f7fa;
+    background: linear-gradient(135deg, #111217 0%, #1a1c24 50%, #111217 100%);
     min-height: 100vh;
 }
+
 
 #navbar {
     position: fixed;
     top: 0;
-    left: 0;           
-    width: 280px;
+    left: 0;
+    width: 260px;
     height: 100vh;
-    background: linear-gradient(180deg, #1e3c72 0%, #2a5298 100%);
-    overflow-y: auto;
-    z-index: 1000;
+    background: #101218;
+    display: flex;
+    flex-direction: column;
     padding-top: 20px;
-    box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(255,255,255,0.06);
+    z-index: 1000;
 }
 
 #navbar header {
-    background: linear-gradient(135deg, #ff6b6b, #ffa500);
-    color: white;
-    padding: 25px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 4px solid #ffd93d;
-    box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+    color: #ffffff;
+    padding: 24px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    letter-spacing: 0.03em;
 }
 
 .nav-link {
-    display: block;
-    color: #e8f4fd;
+    padding: 14px 22px;
     text-decoration: none;
-    padding: 18px 25px;
-    border-left: 5px solid transparent;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
-}
-
-.nav-link:hover::before,
-.nav-link:focus::before {
-    left: 100%;
+    color: #d0d4e0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
 }
 
 .nav-link:hover,
+.nav-link:focus,
 .nav-link.active {
-    background: linear-gradient(135deg, #ff9a9e, #fecfef);
-    color: #1e3c72;
-    border-left-color: #ffa500;
-    padding-left: 35px;
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(255,165,0,0.4);
+    background: rgba(255,255,255,0.06);
+    color: #ffffff;
+    padding-left: 28px;
 }
 
+
 #main-doc {
-    margin-left: 280px; 
-    padding: 40px;
     max-width: 900px;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(20px);
-    min-height: 100vh;
-    border-radius: 20px;
-    margin: 20px auto;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    margin: 32px auto 40px;
+    padding: 32px 32px 40px;
+    margin-left: 280px;       /* creates space for sidebar */
+    background: radial-gradient(circle at top left, #222536, #151722);
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
 }
 
 
 .main-section {
-    margin-bottom: 40px;
-    padding: 35px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,245,245,0.8));
-    border-left: 6px solid #4facfe;
-    box-shadow: 0 10px 30px rgba(79,172,254,0.2);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-}
-
-.main-section:nth-child(even) {
-    border-left-color: #ffa500;
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,240,220,0.8));
-    box-shadow: 0 10px 30px rgba(255,165,0,0.2);
-}
-
-.main-section:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(79,172,254,0.3);
+    margin-bottom: 32px;
+    padding: 26px 24px;
+    background: rgba(10, 12, 20, 0.9);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.04);
 }
 
 .main-section header {
-    font-size: 28px;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 25px;
-    font-weight: 700;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #ffd93d;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 18px;
 }
 
 .main-section p {
-    margin-bottom: 18px;
-    font-size: 16px;
-    color: #2c3e50;
+    margin-bottom: 14px;
+    font-size: 15px;
+    color: #e3e5ef;
 }
 
 .main-section ul {
-    margin: 20px 0 25px 25px;
+    margin: 14px 0 16px 22px;
 }
 
 .main-section li {
-    margin-bottom: 10px;
-    color: #34495e;
-    padding: 5px 0;
+    margin-bottom: 8px;
+    color: #cbd0e6;
 }
+
 
 code {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    padding: 8px 15px;
-    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    padding: 6px 10px;
+    border-radius: 6px;
     font-family: 'Courier New', monospace;
-    color: #1e3c72;
-    font-weight: bold;
+    color: #ffe9a7;
     font-size: 14px;
-    border-left: 5px solid #4facfe;
     display: inline-block;
-    margin: 8px 0;
-    box-shadow: 0 4px 15px rgba(79,172,254,0.3);
+    margin: 6px 0;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
     #navbar {
-      
-        transform: translateX(-100%);
-        transition: transform 0.4s ease;
+        width: 220px;
     }
-    
-    #navbar.open {
-        transform: translateX(0);
-    }
-    
+
     #main-doc {
-        margin-left: 0;
-        margin: 10px;
-        padding: 25px;
-        border-radius: 15px;
+        margin: 24px 16px 32px;
+        margin-left: 240px;
+        padding: 24px 22px 32px;
     }
-    
+
     .main-section {
-        padding: 25px;
-        margin-bottom: 25px;
+        padding: 22px 18px;
     }
-    
+
     .main-section header {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     #navbar {
-        width: 260px;
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0 6px;
     }
-    
+
+    #navbar header {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 10px 14px;
+        font-size: 13px;
+        justify-content: center;
+        flex: 0 0 auto;
+    }
+
     #main-doc {
-        padding: 20px;
+        margin: 16px 10px 24px;
+        margin-left: 0;
+        padding: 20px 16px 26px;
+        border-radius: 14px;
     }
-    
+
+    .main-section {
+        padding: 18px 14px;
+        margin-bottom: 20px;
+    }
+
     code {
         display: block;
-        padding: 15px;
-        margin: 15px 0;
         white-space: pre-wrap;
-        font-size: 15px;
     }
 }
